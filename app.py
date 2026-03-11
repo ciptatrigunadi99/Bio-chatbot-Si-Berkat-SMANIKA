@@ -3,7 +3,7 @@ import streamlit as st
 # Pengaturan Judul Halaman
 st.set_page_config(page_title="BioBot: Belajar Biologi", page_icon="🌿")
 
-st.title("🌿 BioBot: Chatbot Pembelajaran Biologi")
+st.title("🌿 BioBot Si BerKat SMANIKA: Chatbot Pembelajaran Biologi")
 st.write("Halo! Saya adalah asisten virtualmu untuk belajar Biologi. Tanyakan sesuatu tentang Sel, Fotosintesis, atau DNA!")
 
 # Inisialisasi riwayat chat
@@ -43,4 +43,5 @@ if prompt := st.chat_input("Ketik pertanyaan biologi di sini..."):
     # Tambahkan respon bot ke riwayat
     with st.chat_message("assistant"):
         st.markdown(response)
+
     st.session_state.messages.append({"role": "assistant", "content": response})
